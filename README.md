@@ -230,4 +230,24 @@ R12,000
 
 Indicate project budjet/b 
 
+REFERENCE LIST
+Food and Agriculture Organization of the United Nations (FAO). (2022). The state of food and agriculture 2022: Leveraging automation in agriculture for transforming agrifood systems. Rome: FAO.
+Food and Agriculture Organization of the United Nations (FAO). (2024). The state of food and agriculture 2024. Rome: FAO.
+International Organization for Standardization (ISO). (2019). ISO 9241-210:2019 Ergonomics of human-system interaction — Part 210: Human-centred design for interactive systems. Geneva: ISO.
+Nielsen, J. (2020). 10 usability heuristics for user interface design. Nielsen Norman Group.
+World Wide Web Consortium (W3C). (2018). Web Content Accessibility Guidelines (WCAG) 2.1. Available at: W3C Web Content Accessibility Guidelines (Accessed: 14 August 2026).
+World Wide Web Consortium (W3C). (2024). HTML Standard. Available at: W3C HTML specification (Accessed: 14 August 2026).
+MDN Web Docs. (2025). CSS: Cascading Style Sheets. Available at: MDN CSS documentation (Accessed: 14 August 2026).
+MDN Web Docs. (2025). JavaScript Guide. Available at: MDN JavaScript Guide (Accessed: 14 August 2026).
+Google. (2025). SEO starter guide. Available at: Google Search Central SEO Starter Guide (Accessed: 14 August 2026).
+Department of Agriculture, Land Reform and Rural Development. (2020). Agriculture, Land Reform and Rural Development: Annual report. Pretoria: Republic of South Africa.
+
+W3C.2026.Understanding Success Criterion2.4.6:Headings and lebels.Available at:https://www.w3.org/WAI/WCAG22/Undestanding/headings-and-labels[Accessed 14 August 2026]
+W3C.2026.Forms Tutorial. Available at:https://www.w3.org/WAI/tutorials/forms/
+[Accessed 14 August 2026]
+
+W3C.2026.Writing for Accessibility.Available at: https:www.w3.org/WAI/tips/writing/
+[Accessed 14 August 2026]
+
+
 # Fhumulani_WEDE5020_POE

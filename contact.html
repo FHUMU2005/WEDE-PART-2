@@ -1,149 +1,68 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Contact My Website for more information about our services.">
-
-    <title>Contact Us - My Website</title>
-
-    <!-- Shared stylesheet -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Kunyarungo Agritech Solutions, Johannesburg</title>
+<meta name="description" content="Contact Kunyarungo Agritech Solutions in Johannesburg for solar irrigation, smart farming and partnership enquiries.">
+<meta name="keywords" content="contact Kunyarungo Agritech, agritech Johannesburg, farming support Gauteng">
+<meta name="author" content="Kunyarungo Agritech Solutions">
+<link rel="canonical" href="https://kunyarungoagritech.netlify.app/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Us | Kunyarungo Agritech Solutions, Johannesburg">
+<meta property="og:description" content="Contact Kunyarungo Agritech Solutions in Johannesburg for solar irrigation, smart farming and partnership enquiries.">
+<meta property="og:url" content="https://kunyarungoagritech.netlify.app/contact.html">
+<meta property="og:image" content="https://kunyarungoagritech.netlify.app/images/solar-irrigation-pump.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2e7d32">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Kunyarungo Agritech Solutions","description":"Solar irrigation, smart farming and water management for small-scale farmers.","url":"https://kunyarungoagritech.netlify.app/","email":"info@kunyarungoagritech.co.za","telephone":"+27123456789","address":{"@type":"PostalAddress","addressLocality":"Johannesburg","addressRegion":"Gauteng","addressCountry":"ZA"},"geo":{"@type":"GeoCoordinates","latitude":-26.2041,"longitude":28.0473}}</script>
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html" aria-current="page">Contact</a><a href="enquiry.html">Enquiry</a></nav></header>
+<main id="main">
 
-    <!-- =========================
-         WEBSITE HEADER
-         ========================= -->
-    <header>
-        <nav aria-label="Main navigation">
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-            <a href="enquiry.html">Enquiry</a>
-
-        </nav>
-    </header>
-
-
-    <!-- =========================
-         MAIN CONTENT
-         ========================= -->
-    <main>
-
-        <section class="contact">
-
-            <h1>Contact Us</h1>
-
-            <p class="contact-intro">
-                We would love to hear from you.
-                Please use the information below or
-                send us a message using the form.
-            </p>
-
-
-            <!-- =========================
-                 CONTACT INFORMATION
-                 ========================= -->
-            <div class="contact-info">
-
-                <h2>Get In Touch</h2>
-
-                <p>
-                    <strong>Email:</strong>
-                    example@email.com
-                </p>
-
-                <p>
-                    <strong>Phone:</strong>
-                    +27 12 345 6789
-                </p>
-
-                <p>
-                    <strong>Address:</strong>
-                    Johannesburg, South Africa
-                </p>
-
-            </div>
-
-
-            <!-- =========================
-                 CONTACT FORM
-                 ========================= -->
-            <form action="#" method="post">
-
-                <label for="name">Full Name:</label>
-
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your full name"
-                    autocomplete="name"
-                    required
-                >
-
-
-                <label for="email">Email Address:</label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email address"
-                    autocomplete="email"
-                    required
-                >
-
-
-                <label for="subject">Subject:</label>
-
-                <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder="Enter the subject"
-                    required
-                >
-
-
-                <label for="message">Message:</label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Write your message here..."
-                    required
-                ></textarea>
-
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         WEBSITE FOOTER
-         ========================= -->
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
-    </footer>
-
+<section class="contact">
+<h1>Contact Us</h1>
+<p class="contact-intro">We would love to hear from you. Use the details below or send a message. Want a price? Try the <a href="enquiry.html">enquiry form</a>.</p>
+<div class="contact-info">
+<h2>Get in touch</h2>
+<p><strong>Email:</strong> info@kunyarungoagritech.co.za</p>
+<p><strong>Phone:</strong> +27 12 345 6789</p>
+<p><strong>Address:</strong> Johannesburg, South Africa</p>
+</div>
+<div id="map" role="region" aria-label="Map showing our Johannesburg location"></div>
+<form id="contact-form" action="#" method="post" novalidate>
+<label for="name">Full name</label><input id="name" name="name" type="text" required autocomplete="name" maxlength="60" placeholder="Enter your full name" aria-describedby="name-error"><span class="error" id="name-error" aria-live="polite"></span>
+<label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com" aria-describedby="email-error"><span class="error" id="email-error" aria-live="polite"></span>
+<label for="phone">Phone number (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="012 345 6789" aria-describedby="phone-error"><span class="error" id="phone-error" aria-live="polite"></span>
+<label for="type">Type of message</label><select id="type" name="type" required aria-describedby="type-error"><option value="">-- Select an option --</option><option>General message</option><option>Partnership</option><option>Sponsorship</option><option>Volunteering</option><option>Media</option></select><span class="error" id="type-error" aria-live="polite"></span>
+<label for="subject">Subject</label><input id="subject" name="subject" type="text" required minlength="3" maxlength="100" placeholder="Enter the subject" aria-describedby="subject-error"><span class="error" id="subject-error" aria-live="polite"></span>
+<label for="message">Message</label><textarea id="message" name="message" required minlength="20" maxlength="1000" placeholder="Write your message here..." aria-describedby="message-error message-hint"></textarea><p class="hint" id="message-hint"><span id="msg-count">0 / 1000 characters</span></p><span class="error" id="message-error" aria-live="polite"></span>
+<button type="submit">Prepare email</button>
+</form>
+<div class="result" id="email-preview" hidden>
+<h2>Your email is ready</h2>
+<p>Check the message below, then send it from your email app.</p>
+<div class="email-preview" id="email-text"></div>
+<p><a class="btn-link" id="send-email" href="#">Send email</a></p>
+</div>
+</section>
+</main>
+<footer>
+<ul class="social">
+<li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+<li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+<li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+</ul>
+<p>&copy; 2026 Kunyarungo Agritech Solutions. All rights reserved.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>
+<script src="./js/map.js" defer></script>
+<script src="./js/forms.js" defer></script>
 </body>
-
 </html>
-```

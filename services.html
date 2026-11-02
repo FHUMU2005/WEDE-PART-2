@@ -1,143 +1,51 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Explore our web design, web development, digital marketing and graphic design services.">
-
-    <title>Our Services - My Website</title>
-
-    <!-- Shared stylesheet -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services: Solar Irrigation, Smart Farming, Water Management</title>
+<meta name="description" content="Browse and compare solar irrigation, drip irrigation, soil sensors, crop dashboards, water storage and farmer training from Kunyarungo Agritech.">
+<meta name="keywords" content="solar irrigation, drip irrigation, soil moisture sensors, water management, farmer training">
+<meta name="author" content="Kunyarungo Agritech Solutions">
+<link rel="canonical" href="https://kunyarungoagritech.netlify.app/services.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Our Services: Solar Irrigation, Smart Farming, Water Management">
+<meta property="og:description" content="Browse and compare solar irrigation, drip irrigation, soil sensors, crop dashboards, water storage and farmer training from Kunyarungo Agritech.">
+<meta property="og:url" content="https://kunyarungoagritech.netlify.app/services.html">
+<meta property="og:image" content="https://kunyarungoagritech.netlify.app/images/solar-irrigation-pump.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2e7d32">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" aria-current="page">Services</a><a href="contact.html">Contact</a><a href="enquiry.html">Enquiry</a></nav></header>
+<main id="main">
 
-    <!-- =========================
-         WEBSITE HEADER
-         ========================= -->
-    <header>
-        <nav aria-label="Main navigation">
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-            <a href="enquiry.html">Enquiry</a>
-
-        </nav>
-    </header>
-
-
-    <!-- =========================
-         MAIN CONTENT
-         ========================= -->
-    <main>
-
-        <section class="services">
-
-            <h1>Our Services</h1>
-
-            <p>
-                We provide high-quality services and creative
-                solutions to help you achieve your goals.
-            </p>
-
-
-            <!-- =========================
-                 SERVICE CARDS
-                 ========================= -->
-            <div class="service-container">
-
-
-                <!-- Web Design -->
-                <article class="service-card">
-
-                    <h2>Web Design</h2>
-
-                    <p>
-                        We create modern, attractive and responsive
-                        websites that provide a great experience
-                        on computers, tablets and mobile devices.
-                    </p>
-
-                    <a href="enquiry.html">
-                        <button type="button">Make an Enquiry</button>
-                    </a>
-
-                </article>
-
-
-                <!-- Web Development -->
-                <article class="service-card">
-
-                    <h2>Web Development</h2>
-
-                    <p>
-                        We develop fast, secure and user-friendly
-                        websites using modern web technologies.
-                    </p>
-
-                    <a href="enquiry.html">
-                        <button type="button">Make an Enquiry</button>
-                    </a>
-
-                </article>
-
-
-                <!-- Digital Marketing -->
-                <article class="service-card">
-
-                    <h2>Digital Marketing</h2>
-
-                    <p>
-                        We help businesses reach more customers
-                        through effective online marketing strategies.
-                    </p>
-
-                    <a href="enquiry.html">
-                        <button type="button">Make an Enquiry</button>
-                    </a>
-
-                </article>
-
-
-                <!-- Graphic Design -->
-                <article class="service-card">
-
-                    <h2>Graphic Design</h2>
-
-                    <p>
-                        We create professional logos, posters,
-                        advertisements and other graphic designs.
-                    </p>
-
-                    <a href="enquiry.html">
-                        <button type="button">Make an Enquiry</button>
-                    </a>
-
-                </article>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         WEBSITE FOOTER
-         ========================= -->
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
-    </footer>
-
+<section class="services">
+<h1>Our Services</h1>
+<p>Search, filter and sort to find the right solution for your farm.</p>
+<div class="filters">
+<div><label for="search">Search services</label><input type="search" id="search" placeholder="e.g. solar"></div>
+<div><label for="category">Category</label><select id="category"><option value="all">All categories</option></select></div>
+<div><label for="sort">Sort by</label><select id="sort"><option value="name">Name (A to Z)</option><option value="price-asc">Price (low to high)</option><option value="price-desc">Price (high to low)</option><option value="lead">Fastest to start</option></select></div>
+</div>
+<p id="service-status" role="status" aria-live="polite">Loading services...</p>
+<div class="service-container" id="service-list"></div>
+</section>
+<dialog id="service-modal" aria-label="Service details"><div class="modal-body" id="modal-content"></div></dialog>
+</main>
+<footer>
+<ul class="social">
+<li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+<li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+<li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+</ul>
+<p>&copy; 2026 Kunyarungo Agritech Solutions. All rights reserved.</p>
+</footer>
+<script src="./js/services.js" defer></script>
+<script src="./js/script.js" defer></script>
 </body>
-
 </html>
-```

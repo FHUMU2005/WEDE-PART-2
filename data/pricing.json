@@ -1,0 +1,10 @@
+{
+  "services": [
+    {"id":"solar-irrigation","name":"Solar-Powered Irrigation","category":"Irrigation","description":"Solar pumps and irrigation lines that cut diesel and electricity costs.","details":["Site assessment and pump sizing","Solar panel and pump installation","Farmer handover and maintenance guide"],"base":15000,"perHectare":4500,"weeks":4},
+    {"id":"drip-irrigation","name":"Drip Irrigation Setup","category":"Irrigation","description":"Water-saving drip lines delivering water straight to the crop roots.","details":["Field layout and design","Drip line and filter installation","Seasonal servicing tips"],"base":8000,"perHectare":3000,"weeks":3},
+    {"id":"soil-sensors","name":"Soil Moisture Sensors","category":"Smart Farming","description":"Low-cost sensors that show when your crops really need water.","details":["Sensor placement plan","Installation and calibration","Phone-friendly readings"],"base":5000,"perHectare":1200,"weeks":2},
+    {"id":"farm-dashboard","name":"Crop Monitoring Dashboard","category":"Smart Farming","description":"A simple dashboard with weather, soil and irrigation alerts.","details":["Dashboard set-up","Weather and rainfall alerts","Monthly summary report"],"base":3500,"perHectare":800,"weeks":2},
+    {"id":"water-management","name":"Water Storage and Management","category":"Water Management","description":"Tanks, rainwater harvesting and a water-use plan for dry seasons.","details":["Water audit","Tank and harvesting installation","Drought-season water plan"],"base":9000,"perHectare":1500,"weeks":3},
+    {"id":"training","name":"Farmer Training Workshop","category":"Training","description":"Hands-on training in smart farming and efficient water use.","details":["Half-day on-farm workshop","Printed guides in local languages","Follow-up support call"],"base":2500,"perHectare":0,"weeks":1}
+  ]
+}

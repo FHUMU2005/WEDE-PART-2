@@ -249,17 +249,68 @@ W3C.2026.Forms Tutorial. Available at:https://www.w3.org/WAI/tutorials/forms/
 W3C.2026.Writing for Accessibility.Available at: https:www.w3.org/WAI/tips/writing/
 [Accessed 14 August 2026]
 
-W3C, 2026. Forms Tutorial. Available at: https://www.w3.org/WAI/tutorials/forms/ [Accessed 14 August 2026].
-
-W3C, 2026. Writing for Accessibility. Available at: https://www.w3.org/WAI/tips/writing/ [Accessed 14 August 2026].
-
-ADAMA, 2026. South African Agritech Solutions. [Online image]. Available at: https://www.adama.com/south-africa/en/innovation/south-african-agritech-solutions [Accessed 2 November 2026].
-
-ADAMA, 2026. Innovation in Agriculture - South Africa. [Online image]. Available at: https://www.adama.com/south-africa/en/innovation/south-african-agritech-solutions [Accessed 2 November 2026].
-
-MyBitSecure, 2026. Cybersecurity in Smart Farming [Online image]. Available at: https://mybitsecure.com/cybersecurity-in-smart-farming/ [Accessed 2 November 2026].
-
-AgriTech Solutions SA, 2026. AgriTech Solutions homepage [Online image]. Available at: https://agritechsolutionssa.co.za/page/ [Accessed 2 November 2026].
-
 
 # Fhumulani_WEDE5020_POE
+
+
+---
+
+# PART 3: ENHANCING FUNCTIONALITY AND SEO
+
+## Live site
+Deployed on Netlify: https://kunyarungoagritech.netlify.app  (replace with your real URL; also update it in `sitemap.xml`, `robots.txt`, the `canonical`/`og:url` tags in each page, and `BASE` in the JSON-LD on contact.html)
+
+## Changelog
+
+### A. Corrections and improvements following Part 2 feedback
+| # | File | Change | Reason |
+|---|------|--------|--------|
+| 1 | `Index.html` renamed to `index.html` | Lowercase file name. | Netlify and GitHub Pages are case-sensitive, so `index.html` links were broken. |
+| 2 | All pages | Replaced the placeholder "My Website" name, footer and generic web-design services copy with Kunyarungo Agritech Solutions and its real services (solar irrigation, smart farming, water management). | Content now matches the organisation described in this README. |
+| 3 | `style.css` | Changed the cyan palette (#00bcd4/#008fa1) to dark/light green with a warm amber accent (#f9a825). | README Section 5 specifies a green, nature-inspired scheme. White text on #2e7d32 passes WCAG AA contrast. |
+| 4 | All pages | Added a "Skip to main content" link, `aria-current="page"` on the active nav link, a visible focus outline and `id="main"`. | Accessibility (WCAG 2.1). |
+| 5 | All pages | Added favicon, canonical URL, keywords, Open Graph and Twitter tags; rewrote titles and meta descriptions to be unique and keyword-based. | SEO and sharing previews. |
+| 6 | All pages | Footer now has social links (`rel="noopener noreferrer"`) and the correct organisation name. | Off-page SEO and security. |
+| 7 | `style.css` | Added `prefers-reduced-motion` support. | Accessibility for users sensitive to motion. |
+
+### B. Part 3 functionality
+| # | File | Change |
+|---|------|--------|
+| 8 | `about.html`, `script.js` | Added **tabs** (Mission / Vision / Values, keyboard arrow-key support) and an **accordion** FAQ (`aria-expanded` toggled with JavaScript). |
+| 9 | `services.html`, `services.js` | Added a **modal** (`<dialog>`) with service details and a "Get a quote" link that pre-selects the service on the enquiry form. |
+| 10 | `contact.html`, `map.js` | Added an **interactive Leaflet/OpenStreetMap map** with a marker and popup for the Johannesburg office. |
+| 11 | `style.css`, `script.js` | Added **animations**: hero slide-in, scroll-reveal using IntersectionObserver, animated number counters, card/image hover transitions (CSS + JS). |
+| 12 | `script.js` | **DOM manipulation**: services and result panels are built with `createElement`/`textContent` (no `innerHTML`), tabs and accordions update ARIA attributes, counters update text nodes. |
+| 13 | `index.html`, `images/` | Added a **gallery with lightbox** (six images, previous/next/close, keyboard arrows, Esc to close). Images have descriptive file names and alt text, and use `loading="lazy"`. |
+| 14 | `services.html`, `services.js`, `pricing.json` | **Dynamic content**: service cards are loaded from `pricing.json` with `fetch`. Added **search, category filter and sort** (name, price, lead time). |
+| 15 | `enquiry.html`, `forms.js`, `pricing.json` | Rebuilt the enquiry form (service, farm size in hectares, preferred start date). After validation it fetches `pricing.json` asynchronously (AJAX) and shows an **estimated cost and availability**, or a response for volunteers/sponsors. |
+| 16 | `contact.html`, `forms.js` | Rebuilt the contact form (name, email, phone, message type, subject, message with character counter). After validation it **compiles an email** shown in a preview, and a "Send email" button opens it addressed to the recipient `info@kunyarungoagritech.co.za`. |
+| 17 | `forms.js` | **Client-side validation** with `novalidate` plus JavaScript: required fields, email format, name letters only, South African phone format, number range, date not in the past, minimum lengths. **Error handling**: messages appear next to each field (`aria-live`), `aria-invalid` is set, and focus moves to the first error. |
+| 18 | `forms.js` | The forms use `action="#"` with `preventDefault()` because there is no server. Submission is handled asynchronously in JavaScript instead of reloading the page. |
+
+### C. SEO
+| # | File | Change |
+|---|------|--------|
+| 19 | `robots.txt` | Allows all crawlers and points to the sitemap. |
+| 20 | `sitemap.xml` | Lists all five pages with priorities and last-modified dates. |
+| 21 | `contact.html` | Added JSON-LD `LocalBusiness` structured data (local SEO). |
+| 22 | `_headers` | **Security**: Content-Security-Policy, X-Content-Type-Options, X-Frame-Options, Referrer-Policy and Permissions-Policy headers (Netlify). |
+| 23 | All pages | **Page speed**: no images over 10 KB (SVG), lazy-loaded images, `defer` on all scripts, Leaflet only loaded on the contact page, no external fonts. |
+
+## SEO strategy
+**Keyword research:** primary keywords are "solar irrigation South Africa", "smart farming small-scale farmers", "water management farming" and "agritech Johannesburg". They appear in titles, H1/H2 headings, meta descriptions, alt text and body copy, without stuffing.
+
+**On-page:** unique `<title>` and meta description per page; one `<h1>` per page followed by H2/H3; descriptive image file names (e.g. `solar-irrigation-pump.svg`) with alt text; clean lowercase URLs; internal links between Home, About, Services, Contact and Enquiry; responsive layout for mobile.
+
+**Off-page (planned):**
+- Backlinks: ask agricultural associations, farmer co-operatives, local municipality pages and partner NGOs to link to the site; list the company in South African agri directories.
+- Social media: share project photos and farmer stories on Facebook, LinkedIn and Instagram (links are in the footer).
+- Local SEO: create a Google Business Profile for the Johannesburg office, keep the name/address/phone identical everywhere, and use the LocalBusiness structured data already added.
+
+## Deployment (Netlify)
+1. Push the site folder to GitHub (`index.html`, `pricing.json`, `_headers`, `robots.txt`, `sitemap.xml` and `images/` must be in the root).
+2. In Netlify choose **Add new site, Import an existing project**, connect the repository, leave the build command empty and set the publish directory to `/`.
+3. After the site is live, replace the placeholder URL everywhere (see "Live site"), then submit `sitemap.xml` in Google Search Console.
+4. Test with Lighthouse in Chrome DevTools and record the scores in this README.
+
+Note: `fetch('./data/pricing.json')` needs a web server. Open the site with VS Code Live Server or the Netlify URL, not by double-clicking the file.

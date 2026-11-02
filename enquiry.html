@@ -1,145 +1,53 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Submit an enquiry about our services, pricing or support.">
-
-    <title>Make an Enquiry - My Website</title>
-
-    <!-- Shared stylesheet -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make an Enquiry: Get a Quote | Kunyarungo Agritech</title>
+<meta name="description" content="Get an instant estimate of cost and availability for solar irrigation, smart farming and water management, or ask about volunteering and sponsoring.">
+<meta name="keywords" content="farm irrigation quote, agritech enquiry, volunteer, sponsor, South Africa">
+<meta name="author" content="Kunyarungo Agritech Solutions">
+<link rel="canonical" href="https://kunyarungoagritech.netlify.app/enquiry.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Make an Enquiry: Get a Quote | Kunyarungo Agritech">
+<meta property="og:description" content="Get an instant estimate of cost and availability for solar irrigation, smart farming and water management, or ask about volunteering and sponsoring.">
+<meta property="og:url" content="https://kunyarungoagritech.netlify.app/enquiry.html">
+<meta property="og:image" content="https://kunyarungoagritech.netlify.app/images/solar-irrigation-pump.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2e7d32">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a><a href="enquiry.html" aria-current="page">Enquiry</a></nav></header>
+<main id="main">
 
-    <!-- =========================
-         WEBSITE HEADER
-         ========================= -->
-    <header>
-        <nav aria-label="Main navigation">
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-            <a href="enquiry.html">Enquiry</a>
-
-        </nav>
-    </header>
-
-
-    <!-- =========================
-         MAIN CONTENT
-         ========================= -->
-    <main>
-
-        <section class="container">
-
-            <h1>Make an Enquiry</h1>
-
-            <form action="#" method="post">
-
-                <!-- Full name -->
-                <label for="name">Full Name:</label>
-
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your full name"
-                    autocomplete="name"
-                    required
-                >
-
-
-                <!-- Email -->
-                <label for="email">Email Address:</label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    autocomplete="email"
-                    required
-                >
-
-
-                <!-- Phone -->
-                <label for="phone">Phone Number:</label>
-
-                <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    autocomplete="tel"
-                >
-
-
-                <!-- Enquiry type -->
-                <label for="subject">Enquiry Type:</label>
-
-                <select id="subject" name="subject" required>
-
-                    <option value="">-- Select an option --</option>
-
-                    <option value="general">
-                        General Enquiry
-                    </option>
-
-                    <option value="services">
-                        Services
-                    </option>
-
-                    <option value="pricing">
-                        Pricing
-                    </option>
-
-                    <option value="support">
-                        Support
-                    </option>
-
-                </select>
-
-
-                <!-- Message -->
-                <label for="message">Your Enquiry:</label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Type your enquiry here..."
-                    required
-                ></textarea>
-
-
-                <!-- Submit -->
-                <button type="submit">
-                    Submit Enquiry
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         WEBSITE FOOTER
-         ========================= -->
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
-    </footer>
-
+<section class="container">
+<h1>Make an Enquiry</h1>
+<p>Tell us what you need and we will show you an estimated cost and availability. Browse the <a href="services.html">services</a> first if you are unsure.</p>
+<form id="enquiry-form" action="#" method="post" novalidate>
+<label for="name">Full name</label><input id="name" name="name" type="text" required autocomplete="name" maxlength="60" placeholder="Enter your full name" aria-describedby="name-error"><span class="error" id="name-error" aria-live="polite"></span>
+<label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com" aria-describedby="email-error"><span class="error" id="email-error" aria-live="polite"></span>
+<label for="phone">Phone number (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="012 345 6789" aria-describedby="phone-error"><span class="error" id="phone-error" aria-live="polite"></span>
+<label for="service">I am enquiring about</label><select id="service" name="service" required aria-describedby="service-error"><option value="">-- Select an option --</option><option value="solar-irrigation">Solar-Powered Irrigation</option><option value="drip-irrigation">Drip Irrigation Setup</option><option value="soil-sensors">Soil Moisture Sensors</option><option value="farm-dashboard">Crop Monitoring Dashboard</option><option value="water-management">Water Storage and Management</option><option value="training">Farmer Training Workshop</option><option value="volunteer">Becoming a volunteer</option><option value="sponsor">Becoming a sponsor</option></select><span class="error" id="service-error" aria-live="polite"></span>
+<label for="farm-size">Farm size (hectares)</label><input id="farm-size" name="farm-size" type="number" min="0.5" max="500" step="0.5" required placeholder="e.g. 5" aria-describedby="farm-size-error"><span class="error" id="farm-size-error" aria-live="polite"></span>
+<label for="start-date">Preferred start date (optional)</label><input id="start-date" name="start-date" type="date" aria-describedby="start-date-error"><span class="error" id="start-date-error" aria-live="polite"></span>
+<label for="message">Your enquiry</label><textarea id="message" name="message" required minlength="10" maxlength="1000" placeholder="Tell us about your farm and what you need..." aria-describedby="message-error"></textarea><span class="error" id="message-error" aria-live="polite"></span>
+<button type="submit">Submit enquiry</button>
+</form>
+<div class="result" id="enquiry-result" role="status" aria-live="polite" hidden></div>
+</section>
+</main>
+<footer>
+<ul class="social">
+<li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+<li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+<li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+</ul>
+<p>&copy; 2026 Kunyarungo Agritech Solutions. All rights reserved.</p>
+</footer>
+<script src="./js/forms.js" defer></script>
 </body>
-
 </html>
-```

@@ -257,5 +257,9 @@ ADAMA, 2026. South African Agritech Solutions. [Online image]. Available at: htt
 
 ADAMA, 2026. Innovation in Agriculture - South Africa. [Online image]. Available at: https://www.adama.com/south-africa/en/innovation/south-african-agritech-solutions [Accessed 2 November 2026].
 
+MyBitSecure, 2026. Cybersecurity in Smart Farming [Online image]. Available at: https://mybitsecure.com/cybersecurity-in-smart-farming/ [Accessed 2 November 2026].
+
+AgriTech Solutions SA, 2026. AgriTech Solutions homepage [Online image]. Available at: https://agritechsolutionssa.co.za/page/ [Accessed 2 November 2026].
+
 
 # Fhumulani_WEDE5020_POE
